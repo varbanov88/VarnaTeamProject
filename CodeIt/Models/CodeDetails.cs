@@ -17,11 +17,12 @@ namespace CodeIt.Models
         public List<string> CodeContent { get; set; }
 
         [Display(Name = "Author")]
+
         public string Author{ get; set; }
 
-        public int PrevPage { get; set; }
+        public string ContactInfo { get; set; }
 
-        public List<string> Comments { get; set; }
+        public int PrevPage { get; set; }
 
     }
 }

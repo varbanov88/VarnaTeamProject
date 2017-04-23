@@ -35,9 +35,15 @@
 
 <div class="space20"></div>
 
-<p class="text-center">
-    <a href="/Code/All?page=@(ViewBag.CurrentPage-1)" class="btn btn-success" @(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)> << Prev </a>
 
-    <a href="/Code/All?page=@(ViewBag.CurrentPage+1)" class="btn btn-success" @((!Model.Any() || Model.Count()<10) ? "disabled" : string.Empty)> Next >> </a>
+@{ 
+    var currUserQuery = Request.QueryString["user"];
+
+}
+
+<p class="text-center">
+    <a href="/Code/All?page=@(ViewBag.CurrentPage-1)@(currUserQuery != null ? "&user=" + currUserQuery : string.Empty)" class="btn btn-success" @(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)> << Prev </a>
+
+    <a href="/Code/All?page=@(ViewBag.CurrentPage+1)@(currUserQuery != null ? "&user=" + currUserQuery : string.Empty)" class="btn btn-success" @((!Model.Any() || Model.Count()<10) ? "disabled" : string.Empty)> Next >> </a>
 
 </p>

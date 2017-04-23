@@ -23,6 +23,10 @@ textarea {
     max-width: 5000px;
 }
 
+.comment{
+    height: 100px;
+}
+
 .text {
     color: #ACACAC;
 }

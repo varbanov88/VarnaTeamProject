@@ -8,41 +8,6 @@ namespace CodeIt.Controllers
 {
     public class CodeController : Controller
     {
-        [HttpGet]
-        [Authorize]
-        public ActionResult Comment(int id)
-        {
-            var comment = new Comment
-            {
-                CodeId = id
-            };
-            return View(comment);
-        }
-
-        [HttpPost]
-        [Authorize]
-        public ActionResult Comment(Comment model)
-        {
-            if (ModelState.IsValid)
-            {
-                var db = new CodeItDbContext();
-
-                var authorId = User.Identity.GetUserId();
-
-                var comment = db.Comments.Add(new Comment
-                {
-                    CodeId = model.Id,
-                    AuthorId = authorId,
-                    Content = model.Content
-                });
-
-                db.SaveChanges();
-
-                return RedirectToAction("Details", new { model.Id });
-            }
-
-            return View(model);
-        }
 
 
         public ActionResult All(int page = 1, string user=null)
@@ -87,7 +52,8 @@ namespace CodeIt.Controllers
                 Author = code.Author.Nickname,
                 CodeTitle = code.CodeTitle,
                 CodeContent = lines,           
-                PrevPage = pPage
+                PrevPage = pPage,
+                ContactInfo = code.Author.Email
             };
             
 
