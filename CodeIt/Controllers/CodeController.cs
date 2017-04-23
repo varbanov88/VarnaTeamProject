@@ -9,11 +9,18 @@ namespace CodeIt.Controllers
     public class CodeController : Controller
     {
         [HttpGet]
-        public ActionResult Comment()
+        [Authorize]
+        public ActionResult Comment(int id)
         {
-            return View();
+            var comment = new Comment
+            {
+                CodeId = id
+            };
+            return View(comment);
         }
 
+        [HttpPost]
+        [Authorize]
         public ActionResult Comment(Comment model)
         {
             if (ModelState.IsValid)
@@ -23,11 +30,20 @@ namespace CodeIt.Controllers
                 var authorId = User.Identity.GetUserId();
 
                 var comment = db.Comments.Add(new Comment
-                { });
+                {
+                    CodeId = model.Id,
+                    AuthorId = authorId,
+                    Content = model.Content
+                });
+
+                db.SaveChanges();
+
+                return RedirectToAction("Details", new { model.Id });
             }
 
             return View(model);
         }
+
 
         public ActionResult All(int page = 1, string user=null)
         {
@@ -67,7 +83,7 @@ namespace CodeIt.Controllers
             var lines = code.CodeContent.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
             var viewCode = new CodeDetails
             {
-
+                Id = id,
                 Author = code.Author.Nickname,
                 CodeTitle = code.CodeTitle,
                 CodeContent = lines,           

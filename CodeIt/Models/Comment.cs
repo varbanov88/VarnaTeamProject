@@ -12,12 +12,11 @@ namespace CodeIt.Models
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Code Comment")]
         public string Content { get; set; }
 
-        [Required]
         public int CodeId { get; set; }
 
-        [Required]
         public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }

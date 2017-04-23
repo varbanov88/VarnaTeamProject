@@ -8,6 +8,7 @@ namespace CodeIt.Models
 {
     public class CodeDetails
     {
+        public int Id { get; set; }
        
         [Display(Name = "Code Title")]
         public string CodeTitle { get; set; }
