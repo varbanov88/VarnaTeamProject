@@ -8,8 +8,14 @@ namespace CodeIt.Models
 {
     public class CodeDetails
     {
+        public CodeDetails()
+        {
+            this.Coments = new List<Comment>();
+        }
+
+
         public int Id { get; set; }
-       
+
         [Display(Name = "Code Title")]
         public string CodeTitle { get; set; }
 
@@ -18,11 +24,13 @@ namespace CodeIt.Models
 
         [Display(Name = "Author")]
 
-        public string Author{ get; set; }
+        public string Author { get; set; }
 
         public string ContactInfo { get; set; }
 
         public int PrevPage { get; set; }
+
+        public List<Comment> Coments {get;set;}
 
     }
 }

@@ -29,6 +29,29 @@
     <a href="" class="btn btn-danger">X Delete</a>
     <a href="" class="btn btn-success">Edit</a>
     <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
-    
+</p>
+<div class="space20"></div>
+<div class="space20"></div>
+<h2>Comments</h2>
 
+<div class="space20"></div>
+<div class="space20"></div>
+<div class="space20"></div>
+<div class="space20"></div>
+
+@{
+    foreach (var c in Model.Coments)
+    {
+        <div>
+            <p class="text-left lead">@c.Author.Nickname</p>
+            <div class="space10"></div>
+            <textarea class="comment">@c.Content</textarea>
+
+        </div>
+       
+
+    }
+}
+<p class="text-right">
+    <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
 </p>

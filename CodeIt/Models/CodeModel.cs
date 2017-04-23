@@ -9,12 +9,6 @@ namespace CodeIt.Models
     public class CodeModel
     {
 
-        public CodeModel()
-        {
-            this.Comments = new List<string>();
-        }
-
-
         [Key]
         public int Id { get; set; }
 
@@ -30,8 +24,6 @@ namespace CodeIt.Models
         public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
-
-        public List<string> Comments { get; set; }
 
     }
 }

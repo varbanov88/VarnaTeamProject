@@ -46,6 +46,8 @@ namespace CodeIt.Controllers
             var db = new CodeItDbContext();
             var code = db.Codes.Where(c => c.Id == id).FirstOrDefault();
             var lines = code.CodeContent.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            var comments = db.Comments.Where(c => c.CodeId == id).ToList();
             var viewCode = new CodeDetails
             {
                 Id = id,
@@ -53,7 +55,8 @@ namespace CodeIt.Controllers
                 CodeTitle = code.CodeTitle,
                 CodeContent = lines,           
                 PrevPage = pPage,
-                ContactInfo = code.Author.Email
+                ContactInfo = code.Author.Email,
+                Coments = comments
             };
             
 

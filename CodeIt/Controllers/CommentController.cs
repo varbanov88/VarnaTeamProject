@@ -30,6 +30,7 @@ namespace CodeIt.Controllers
 
         [HttpPost]
         [Authorize]
+        [ValidateInput(false)]
         public ActionResult Create(CommentViewModel model)
         {
             if (ModelState.IsValid)

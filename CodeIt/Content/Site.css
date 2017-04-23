@@ -23,9 +23,6 @@ textarea {
     max-width: 5000px;
 }
 
-.comment{
-    height: 100px;
-}
 
 .text {
     color: #ACACAC;
@@ -92,6 +89,21 @@ pre {
     margin: 0;
     padding: 8px 12px;
 }
+.comment {
+    display: inline-block;
+    background: rgba(0, 57, 194, 0.10);
+    border: 1px solid #f3f3f3;
+    border-radius: 0px;
+    box-shadow: 5px 6px rgba(95, 95, 95, 0.25);
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    min-height: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 5px 4px;
+}
+
 
 .lyne {
     height: 10px;
