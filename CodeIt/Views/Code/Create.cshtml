@@ -1,0 +1,34 @@
+﻿@model CodeIt.Models.CreateCodeModel
+@{ 
+    ViewBag.Title = "New Paste";
+}
+<div class="space20"></div>
+
+
+@Html.ValidationSummary("", new { @class = "text-danger" })
+
+<div class="space10"></div>
+
+@using (Html.BeginForm("Create", "Code", FormMethod.Post))
+{
+
+
+
+    <div class="container">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CodeTitle, new { @class = "col-md-2 control-label" }) 
+            @Html.TextBoxFor(m => m.CodeTitle, new { @class = "form-control" })
+            
+        </div>
+        <div class="space20"></div>
+        <div class="space20"></div>
+        @Html.LabelFor(m => m.CodeContent, new { @class = "control-label col-md-2" })
+        <textarea class="form-control paste_textarea" cols="100" data-val="true" data-val-required="The CodeContent field is required." id="CodeContent" name="CodeContent" style="resize: horizontal; height: 400px;"></textarea>
+    </div>
+
+    <br>
+    <div class="container">
+        <input type="submit" value="Save Code" class="btn btn-primary" />
+    </div>
+}

@@ -1,0 +1,31 @@
+﻿@model CodeIt.Models.CodeDetails
+@{
+    ViewBag.Title = "Details";
+    
+}
+<div class="space20"></div>
+
+<h1>@Model.CodeTitle</h1>
+
+<div class="space20"></div>
+
+<h2>@Model.Author</h2>   
+
+<div class="space20"></div>
+
+
+<div id="selectable" class="ui-selectable space10">
+    <ol class="text well">
+       @foreach (var line in Model.CodeContent)
+       {
+            <li class="li1" > <div class="de1" ><pre>@(line)</pre></div></li>
+       }
+
+    </ol>
+</div>
+<p class="text-right">
+    <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+    <a href="" class="btn btn-danger">X Delete</a>
+    <a href="" class="btn btn-success">Edit</a>
+
+</p>

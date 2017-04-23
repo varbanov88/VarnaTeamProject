@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CodeIt.Models.AllCodesModel>
+
+@{ 
+    ViewBag.Title = "All Pastes";
+}
+
+<h2 class="text-center">Codes - Page @ViewBag.CurrentPage</h2>
+
+
+@if (!Model.Any())
+{
+    <h1 class="text-center">No more codes!</h1>
+}
+
+@foreach (var code in Model)
+{
+    <div>
+        <div class="space10"></div>
+
+        <h1>@code.CodeTitle</h1>
+        <h3>@code.Author</h3>
+
+
+
+
+        <a href="/Code/Details/@code.Id?pPage=@ViewBag.CurrentPage" class="btn btn-info">See more >></a>
+    </div>
+
+            
+
+<hr class="lyne" />
+
+}
+
+
+<div class="space20"></div>
+
+<p class="text-center">
+    <a href="/Code/All?page=@(ViewBag.CurrentPage-1)" class="btn btn-success" @(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)> << Prev </a>
+
+    <a href="/Code/All?page=@(ViewBag.CurrentPage+1)" class="btn btn-success" @((!Model.Any() || Model.Count()<10) ? "disabled" : string.Empty)> Next >> </a>
+
+</p>

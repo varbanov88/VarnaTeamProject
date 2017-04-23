@@ -1,0 +1,294 @@
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\ApplicationInsights.config
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\csc.exe
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\csc.exe.config
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\csc.rsp
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\csi.exe
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\csi.rsp
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.AppContext.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.Collections.Immutable.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.IO.FileSystem.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\vbc.exe
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\vbc.exe.config
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\vbc.rsp
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\VBCSCompiler.exe
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\roslyn\VBCSCompiler.exe.config
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\CodeIt.dll.config
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\CodeIt.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\CodeIt.pdb
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Antlr3.Runtime.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\EntityFramework.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\EntityFramework.SqlServer.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.Web.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.WindowsServer.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.ApplicationInsights.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Google.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Web.Infrastructure.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Newtonsoft.Json.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Owin.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Helpers.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Mvc.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Optimization.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Razor.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.Deployment.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.Razor.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\WebGrease.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Helpers.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Mvc.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Optimization.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.Razor.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.Deployment.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\System.Web.WebPages.Razor.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Antlr3.Runtime.pdb
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Newtonsoft.Json.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\EntityFramework.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\EntityFramework.SqlServer.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Google.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.ApplicationInsights.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.WindowsServer.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\bin\Microsoft.AI.Web.xml
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\obj\Debug\CodeIt.csprojResolveAssemblyReference.cache
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\obj\Debug\CodeIt.dll
+c:\users\mirev\documents\visual studio 2017\Projects\CodeIt\CodeIt\obj\Debug\CodeIt.pdb
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\CodeIt\obj\Debug\CodeIt.Migrations.InitialCreate.resources
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\CodeIt\obj\Debug\CodeIt.csproj.GenerateResource.Cache
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\ApplicationInsights.config
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\csc.exe
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\csc.exe.config
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\csc.rsp
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\csi.exe
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\csi.rsp
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.AppContext.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\vbc.exe
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\vbc.exe.config
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\vbc.rsp
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\CodeIt.dll.config
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\CodeIt.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\CodeIt.pdb
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Antlr3.Runtime.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\EntityFramework.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\EntityFramework.SqlServer.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.Web.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Newtonsoft.Json.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Owin.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Helpers.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Mvc.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Optimization.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Razor.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\WebGrease.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Helpers.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Mvc.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Optimization.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.Razor.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Antlr3.Runtime.pdb
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Newtonsoft.Json.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\EntityFramework.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\EntityFramework.SqlServer.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\bin\Microsoft.AI.Web.xml
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\obj\Debug\CodeIt.csprojResolveAssemblyReference.cache
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\obj\Debug\CodeIt.Migrations.InitialCreate.resources
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\obj\Debug\CodeIt.csproj.GenerateResource.Cache
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\obj\Debug\CodeIt.dll
+C:\Users\Mirev\Documents\Visual Studio 2017\Projects\CodeIt\SoftUniProject\CodeIt\obj\Debug\CodeIt.pdb
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\ApplicationInsights.config
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\csc.exe
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\csc.exe.config
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\csc.rsp
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\csi.exe
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\csi.rsp
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.AppContext.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\vbc.exe
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\vbc.exe.config
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\vbc.rsp
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\CodeIt.dll.config
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\CodeIt.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\CodeIt.pdb
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Antlr3.Runtime.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\EntityFramework.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\EntityFramework.SqlServer.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.Web.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Newtonsoft.Json.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Owin.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Helpers.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Mvc.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Optimization.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Razor.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\WebGrease.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Helpers.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Mvc.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Optimization.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.Razor.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Antlr3.Runtime.pdb
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Newtonsoft.Json.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\EntityFramework.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\EntityFramework.SqlServer.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\bin\Microsoft.AI.Web.xml
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\obj\Debug\CodeIt.csprojResolveAssemblyReference.cache
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\obj\Debug\CodeIt.Migrations.InitialCreate.resources
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\obj\Debug\CodeIt.csproj.GenerateResource.Cache
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\obj\Debug\CodeIt.dll
+C:\Users\Mirev\Desktop\new repo\SoftUniProject\CodeIt\obj\Debug\CodeIt.pdb

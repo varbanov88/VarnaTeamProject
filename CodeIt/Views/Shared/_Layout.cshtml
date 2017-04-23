@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+
+<script>
+    window.addEventListener('load', eventWindowLoaded, false);
+
+    function eventWindowLoaded() {
+        canvasApp();
+    }
+    function canvasSupport(e) {
+
+        return !!e.getContext;
+
+    }
+    function canvasApp() {
+        var canvas = document.getElementById('myCanvas');
+        
+        canvas.width = window.innerWidth;
+        
+        if (!canvasSupport(myCanvas)) {
+            return;
+        }
+
+        var ctx = canvas.getContext('2d');
+        var w = canvas.width;
+        var h = canvas.height;
+        var yPositions = Array(w).join(0).split('');
+
+        function runMatrix() {
+            if (typeof Game_Interval != 'undefined') clearInterval(Game_interval);
+            Game_Interval = setInterval(drawScreen, 34);
+        }
+
+        function drawScreen() {
+
+            ctx.fillStyle = 'rgba(0,0,0,.05)';
+            ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = '#0f0';
+            ctx.font = '10px Georgia';
+            yPositions.map(function (y, index) {
+                text = String.fromCharCode(1e2 + Math.random() * 33);
+                x = (index * 10) + 10;
+                ctx.fillText(text, x, y);
+                if (y > 100 + Math.random() * 1e4) {
+                    yPositions[index] = 0;
+                } else {
+                    yPositions[index] = y + 10;
+                }
+            })
+        }
+
+        runMatrix();
+
+    }
+</script>
+
+<canvas  id="myCanvas" height="62"></canvas>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Code It</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Code It", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("New Paste", "Create", "Code")</li>
+                    <li>@Html.ActionLink("All Pastes", "All", "Code")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p class="text-left">&copy; @DateTime.Now.Year - Varna Team</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
