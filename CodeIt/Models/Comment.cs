@@ -15,9 +15,11 @@ namespace CodeIt.Models
         public string Content { get; set; }
 
         [Required]
-        public string ArticleId { get; set; }
+        public int CodeId { get; set; }
 
         [Required]
+        public string AuthorId { get; set; }
+
         public virtual User Author { get; set; }
     }
 }
