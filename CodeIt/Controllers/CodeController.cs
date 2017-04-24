@@ -98,8 +98,8 @@ namespace CodeIt.Controllers
             }
             return View(model);
         }
-        
-        public ActionResult GuestCodeDetails( int id, int pPage = 1)
+
+        public ActionResult GuestCodeDetails(int id, int pPage = 1)
         {
             var db = new CodeItDbContext();
             var code = db.GuestCodes.Where(c => c.Id == id).FirstOrDefault();
