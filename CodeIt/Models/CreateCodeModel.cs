@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CodeIt.Models
 {
+    //Model used for the Creating View of new Paste/Code
     public class CreateCodeModel
     {
         [Required(ErrorMessage = "Title is required")]

@@ -5,6 +5,7 @@ using System.Web;
 
 namespace CodeIt.Models
 {
+    //Used as a model for the All View 
     public class AllCodesModel
     {
         public int Id { get; set; }

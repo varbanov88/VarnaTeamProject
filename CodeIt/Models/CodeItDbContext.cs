@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace CodeIt.Models
 {
-
+    //DATABASE
 
     public class CodeItDbContext : IdentityDbContext<User>
     {
@@ -11,6 +11,7 @@ namespace CodeIt.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public virtual IDbSet<CommentOnGuest> CommentsOnGuest { get; set; }
 
         public virtual IDbSet<GuestCodeModel> GuestCodes { get; set; }
 

@@ -207,8 +207,10 @@
     <Compile Include="Models\CodeItDbContext.cs" />
     <Compile Include="Models\CodeModel.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\CommentOnGuest.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\CreateCodeModel.cs" />
+    <Compile Include="Models\GuestCodeDetailsModel.cs" />
     <Compile Include="Models\GuestCodeModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\User.cs" />
@@ -277,6 +279,7 @@
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Code\CreateAsGuest.cshtml" />
     <Content Include="Views\Code\Delete.cshtml" />
+    <Content Include="Views\Code\GuestCodeDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

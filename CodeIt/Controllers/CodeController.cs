@@ -98,7 +98,32 @@ namespace CodeIt.Controllers
             }
             return View(model);
         }
+        
+        public ActionResult GuestCodeDetails( int id, int pPage = 1)
+        {
+            var db = new CodeItDbContext();
+            var code = db.GuestCodes.Where(c => c.Id == id).FirstOrDefault();
+            var lines = code.CodeContent.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
+            var comments = db.CommentsOnGuest.Where(c => c.CodeId == id).ToList();
+            var viewCode = new GuestCodeDetailsModel
+            {
+                Id = id,
+                Author = code.Author,
+                CodeTitle = code.CodeTitle,
+                CodeContent = lines,
+                PrevPage = pPage,
+                Coments = comments
+            };
+
+
+            if (code == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(viewCode);
+        }
 
         //Action for GuestPosts
 
@@ -119,16 +144,11 @@ namespace CodeIt.Controllers
             {
                 var db = new CodeItDbContext();
 
-                var code = db.GuestCodes.Add(new GuestCodeModel
-                {
-                    CodeTitle = model.CodeTitle,
-                    CodeContent = model.CodeContent,
-
-                });
+                db.GuestCodes.Add(model);
 
                 db.SaveChanges();
 
-                return RedirectToAction("All");
+                return RedirectToAction("GuestCodeDetails", new { id = model.Id});
 
             }
             return View(model);

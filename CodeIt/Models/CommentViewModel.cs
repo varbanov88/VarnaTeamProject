@@ -6,6 +6,7 @@ using System.Web;
 
 namespace CodeIt.Models
 {
+    //Model used for the Creating View of the Comment
     public class CommentViewModel
     {
         [Key]
@@ -18,6 +19,8 @@ namespace CodeIt.Models
         public int CodeId { get; set; }
 
         public string AuthorId { get; set; }
+
+        public string TypeOfCode { get; set; }
 
         public virtual User Author { get; set; }
 

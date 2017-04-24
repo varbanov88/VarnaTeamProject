@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CodeIt.Models
 {
+    //Model used for Code pasted by Guest User. Used to store in DATABASE
     public class GuestCodeModel
     {
         public GuestCodeModel()

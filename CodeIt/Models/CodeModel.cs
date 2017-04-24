@@ -6,6 +6,8 @@ using System.Web;
 
 namespace CodeIt.Models
 {
+
+    //Model for the Code used to store in DATABASE
     public class CodeModel
     {
 

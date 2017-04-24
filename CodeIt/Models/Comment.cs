@@ -6,6 +6,8 @@ using System.Web;
 
 namespace CodeIt.Models
 {
+
+    //Model for the Comment used to store in DATABASE
     public class Comment
     {
         [Key]
@@ -20,5 +22,6 @@ namespace CodeIt.Models
         public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
+
     }
 }

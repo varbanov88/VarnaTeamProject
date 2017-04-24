@@ -16,7 +16,11 @@
 
     <div class="container">
 
-        <div class="form-group">
+        <div class="form-group space20">
+            @Html.LabelFor(m => m.Author, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.Author, new { @class = "form-control" })
+            <div class="space20"></div>
+
             @Html.LabelFor(m => m.CodeTitle, new { @class = "col-md-2 control-label" }) 
             @Html.TextBoxFor(m => m.CodeTitle, new { @class = "form-control" })
             

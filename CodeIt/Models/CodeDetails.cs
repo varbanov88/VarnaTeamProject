@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
+
+//Used as a model for the Code Details View
 namespace CodeIt.Models
 {
     public class CodeDetails
@@ -25,6 +27,8 @@ namespace CodeIt.Models
 
         public string ContactInfo { get; set; }
 
+
+        //Optional | tells the Details View The Previous Page
         public int PrevPage { get; set; }
 
         public List<Comment> Coments {get;set;}
