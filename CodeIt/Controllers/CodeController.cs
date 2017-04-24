@@ -99,7 +99,7 @@ namespace CodeIt.Controllers
             return View(model);
         }
 
-        
+
         //Action for GuestPosts
 
         [HttpGet]
@@ -123,7 +123,7 @@ namespace CodeIt.Controllers
                 {
                     CodeTitle = model.CodeTitle,
                     CodeContent = model.CodeContent,
- 
+
                 });
 
                 db.SaveChanges();
@@ -133,7 +133,82 @@ namespace CodeIt.Controllers
             }
             return View(model);
         }
+
+        [Authorize]
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var code = db.Codes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            var guestCode = db.GuestCodes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            var foundCode = false;
+
+            if (code != null || guestCode != null)
+            {
+                foundCode = true;
+
+                if (code != null)
+                {
+                    return View(code);
+                }
+
+                else
+                {
+                    return View(guestCode);
+                }
+
+            }
+
+            if (foundCode)
+            {
+                return HttpNotFound();
+            }
+
+            return View();
+        }
+
+        [Authorize]
+        [ActionName("Delete")]
+        [HttpPost]
+        public ActionResult ConfirmDelete(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var code = db.Codes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            var guestCode = db.GuestCodes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            if (code == null && guestCode == null)
+            {
+                return HttpNotFound();
+            }
+
+            if (code != null)
+            {
+                db.Codes.Remove(code);
+            }
+
+            else
+            {
+                db.GuestCodes.Remove(guestCode);
+            }
+
+            db.SaveChanges();
+            return RedirectToAction("All");
+
+        }
     }
 
-      
+
 }
