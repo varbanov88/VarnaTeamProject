@@ -3,6 +3,9 @@
     ViewBag.Title = "Details";
     
 }
+
+
+
 <div class="space20"></div>
 
 <h1>@Model.CodeTitle</h1>
@@ -42,12 +45,18 @@
 @{
     foreach (var c in Model.Coments)
     {
-        <div>
-            <p class="text-left lead">@c.Author.Nickname</p>
-            <div class="space10"></div>
-            <textarea class="comment">@c.Content</textarea>
-
+        <div class="space10 comDiv">
+            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
+            <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
+            <textarea class="comment " disabled>@c.Content</textarea>
+            <p class="text-right" style="margin:2px; margin-right:10px">
+                <a href="" class="btn btn-info" >View >></a>
+            </p>
         </div>
+
+       
+            
+       
        
 
     }

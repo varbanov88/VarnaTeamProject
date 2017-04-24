@@ -89,8 +89,7 @@ pre {
     margin: 0;
     padding: 8px 12px;
 }
-.comment {
-    display: inline-block;
+.comDiv {
     background: rgba(0, 57, 194, 0.10);
     border: 1px solid #f3f3f3;
     border-radius: 0px;
@@ -98,10 +97,25 @@ pre {
     box-sizing: border-box;
     display: block;
     height: auto;
-    min-height: 40px;
+    min-height: 100px;
     width: 100%;
     margin-bottom: 30px;
-    padding: 5px 4px;
+    
+}
+.comment {
+    display: inline-flex;
+    background: rgba(0, 57, 194, 0.10);
+    border: 1px solid #f3f3f3;
+    border-radius: 0px;
+    box-shadow: 4px 6px rgba(95, 95, 95, 0.25);
+    box-sizing: border-box;
+    display: block;
+    min-height: 90px;
+    width: 98%;
+    padding: 3px 6px;
+    margin-bottom:10px;
+    margin-left:10px;
+    max-height:500px;
 }
 
 
