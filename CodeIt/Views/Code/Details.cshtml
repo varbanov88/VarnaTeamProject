@@ -31,8 +31,8 @@
     <a href="/Code/All?user=@Model.ContactInfo" class="btn btn-primary">See More Codes From this User</a>
             @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin")))
             {
-                @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
-                @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs" })
+                @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" }) 
+                @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
             }
     <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
 </p>
