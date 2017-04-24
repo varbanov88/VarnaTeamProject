@@ -113,13 +113,13 @@ namespace CodeIt.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult CreateAsGuest(PasteAsGuest model)
+        public ActionResult CreateAsGuest(GuestCodeModel model)
         {
             if (ModelState.IsValid)
             {
                 var db = new CodeItDbContext();
 
-                var code = db.Codes.Add(new CodeModel
+                var code = db.GuestCodes.Add(new GuestCodeModel
                 {
                     CodeTitle = model.CodeTitle,
                     CodeContent = model.CodeContent,
@@ -128,7 +128,7 @@ namespace CodeIt.Controllers
 
                 db.SaveChanges();
 
-                return RedirectToAction("Details", new { model.Id });
+                return RedirectToAction("All");
 
             }
             return View(model);

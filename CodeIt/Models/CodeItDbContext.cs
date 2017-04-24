@@ -12,6 +12,8 @@ namespace CodeIt.Models
         {
         }
 
+        public virtual IDbSet<GuestCodeModel> GuestCodes { get; set; }
+
         public virtual IDbSet<CodeModel> Codes { get; set; }
 
         public virtual IDbSet<Comment> Comments { get; set; }

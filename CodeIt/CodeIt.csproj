@@ -203,13 +203,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AllCodesModel.cs" />
-    <Compile Include="Models\PasteAsGuest.cs" />
     <Compile Include="Models\CodeDetails.cs" />
     <Compile Include="Models\CodeItDbContext.cs" />
     <Compile Include="Models\CodeModel.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\CreateCodeModel.cs" />
+    <Compile Include="Models\GuestCodeModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,7 +275,7 @@
     <Content Include="Views\Code\Details.cshtml" />
     <Content Include="Views\Code\All.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
-    <Content Include="Views\Code\PasteAsGuest.cshtml" />
+    <Content Include="Views\Code\CreateAsGuest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
