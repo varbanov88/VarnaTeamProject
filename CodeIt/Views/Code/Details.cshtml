@@ -1,4 +1,5 @@
 ﻿@model CodeIt.Models.CodeDetails
+    @using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Details";
     
@@ -27,12 +28,29 @@
     </ol>
 </div>
 <p class="text-right">
-    <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+    @{
+        if (Model.MyUser != null)
+        {
+            <a href="/Code/All?page=@Model.PrevPage&user=@Model.MyUser" class="btn btn-info"><< Back</a>
+        }
+        else 
+        {
+            <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+        }
+        
+    }
+
+    
     <a href="/Code/All?user=@Model.ContactInfo" class="btn btn-primary">See More Codes From this User</a>
-            
-         
-                @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" }) 
+         @{
+             if(User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.isAuthor(User.Identity.GetUserId())))
+             {
+
+                @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
                 @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
+             }
+        }   
+         
     <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
 </p>
 <div class="space20"></div>

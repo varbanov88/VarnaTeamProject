@@ -14,7 +14,7 @@ namespace CodeIt.Controllers
         {
             var db = new CodeItDbContext();
             var code = db.Codes.Find(id);
-            if(code == null)
+            if(code == null || !IsAuthorised(code))
             {
                 return HttpNotFound();
             }
@@ -26,11 +26,16 @@ namespace CodeIt.Controllers
         [HttpPost]
         public ActionResult Edit(CodeModel model)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid )
             {
                 using (var db = new CodeItDbContext())
                 {
                     var code = db.Codes.Find(model.Id);
+
+                    if(code == null || !IsAuthorised(code))
+                    {
+                        return HttpNotFound();
+                    }
 
                     code.CodeTitle = model.CodeTitle;
                     code.CodeContent = model.CodeContent;
@@ -74,7 +79,7 @@ namespace CodeIt.Controllers
             return View(pastes);
         }
 
-        public ActionResult Details(int id, int pPage = 1)
+        public ActionResult Details(int id, int pPage = 1, string myUser = null)
         {
             var db = new CodeItDbContext();
             var code = db.Codes.Where(c => c.Id == id).FirstOrDefault();
@@ -89,7 +94,9 @@ namespace CodeIt.Controllers
                 CodeContent = lines,
                 PrevPage = pPage,
                 ContactInfo = code.Author.Email,
-                Coments = comments
+                Coments = comments,
+                AuthorId = code.AuthorId,
+                MyUser = myUser
             };
 
 
@@ -198,7 +205,7 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            if(code == null)
+            if(code == null || !IsAuthorised(code))
             {
                 return HttpNotFound();
             }
@@ -218,7 +225,7 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            if (code == null)
+            if (code == null || !IsAuthorised(code))
             {
                 return HttpNotFound();
             }
@@ -235,6 +242,17 @@ namespace CodeIt.Controllers
             db.SaveChanges();
             return RedirectToAction("All");
 
+        }
+
+        /// <summary>
+        /// Authorisation helper function
+        /// </summary>
+        private bool IsAuthorised(CodeModel code)
+        {
+            var isAdmin = this.User.IsInRole("Admin");
+            var isAuthor = code.isAuthor(this.User.Identity.GetUserId());
+
+            return isAdmin || isAuthor;
         }
     }
 

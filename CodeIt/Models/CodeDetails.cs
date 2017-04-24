@@ -27,12 +27,20 @@ namespace CodeIt.Models
 
         public string ContactInfo { get; set; }
 
+        public string AuthorId { get; set; }
 
         //Optional | tells the Details View The Previous Page
         public int PrevPage { get; set; }
 
+        //Optional | if you are in My codes tell the user
+        public string MyUser { get; set; }
+
         public List<Comment> Coments {get;set;}
 
+        public bool isAuthor(string authorId)
+        {
+            return this.AuthorId == authorId;
+        }
 
 
     }

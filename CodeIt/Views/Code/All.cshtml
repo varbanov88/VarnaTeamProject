@@ -21,9 +21,13 @@
         <h3>@code.Author</h3>
 
 
+        @{
+            var currUserQuery1 = Request.QueryString["user"];
+
+        }
 
 
-        <a href="/Code/Details/@code.Id?pPage=@ViewBag.CurrentPage" class="btn btn-info">See more >></a>
+        <a href="/Code/Details/@code.Id?pPage=@ViewBag.CurrentPage@(currUserQuery1 != null ? "&myUser=" + currUserQuery1 : string.Empty)" class="btn btn-info">See more >></a>
     </div>
 
             
@@ -35,9 +39,8 @@
 
 <div class="space20"></div>
 
-
-@{ 
-    var currUserQuery = Request.QueryString["user"];
+@{
+            var currUserQuery = Request.QueryString["user"];
 
 }
 

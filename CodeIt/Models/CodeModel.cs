@@ -27,5 +27,10 @@ namespace CodeIt.Models
 
         public virtual User Author { get; set; }
 
+        public bool isAuthor (string authorId)
+        {
+            return this.AuthorId == authorId;
+        }
+
     }
 }
