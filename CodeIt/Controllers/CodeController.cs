@@ -164,34 +164,13 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            var guestCode = db.GuestCodes
-                .Where(a => a.Id == id)
-                .FirstOrDefault();
-
-            var foundCode = false;
-
-            if (code != null || guestCode != null)
-            {
-                foundCode = true;
-
-                if (code != null)
-                {
-                    return View(code);
-                }
-
-                else
-                {
-                    return View(guestCode);
-                }
-
-            }
-
-            if (!foundCode)
+            if(code == null)
             {
                 return HttpNotFound();
             }
 
-            return View();
+            return View(code);
+               
         }
 
         [Authorize]
@@ -205,23 +184,18 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            var guestCode = db.GuestCodes
-                .Where(a => a.Id == id)
-                .FirstOrDefault();
-
-            if (code == null && guestCode == null)
+            if (code == null)
             {
                 return HttpNotFound();
             }
 
-            if (code != null)
-            {
-                db.Codes.Remove(code);
-            }
+            db.Codes.Remove(code);
 
-            else
+            var comments = db.Comments.Where(c => c.CodeId == id).ToList();
+
+            foreach(var c in comments)
             {
-                db.GuestCodes.Remove(guestCode);
+                db.Comments.Remove(c);
             }
 
             db.SaveChanges();

@@ -29,11 +29,10 @@
 <p class="text-right">
     <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
     <a href="/Code/All?user=@Model.ContactInfo" class="btn btn-primary">See More Codes From this User</a>
-            @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin")))
-            {
+            
+         
                 @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" }) 
                 @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
-            }
     <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
 </p>
 <div class="space20"></div>

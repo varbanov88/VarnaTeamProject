@@ -1,0 +1,62 @@
+﻿@model CodeIt.Models.GuestCodeDetailsModel
+@{
+    ViewBag.Title = "Details";
+
+}
+
+
+
+<div class="space20"></div>
+
+<h1>@Model.CodeTitle</h1>
+
+<div class="space20"></div>
+
+<h2>@Model.Author</h2>
+
+<div class="space20"></div>
+
+
+<div id="selectable" class="ui-selectable space10">
+    <ol class="text well">
+        @foreach (var line in Model.CodeContent)
+        {
+            <li class="li1"> <div class="de1"><pre>@(line)</pre></div></li>
+        }
+
+    </ol>
+</div>
+<p class="text-right">
+    <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a> 
+    @if (User.IsInRole("Admin"))
+            {
+        @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
+    }
+    <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
+</p>
+<div class="space20"></div>
+<div class="space20"></div>
+<h2>Comments</h2>
+
+<div class="space20"></div>
+<div class="space20"></div>
+<div class="space20"></div>
+<div class="space20"></div>
+
+@{
+    foreach (var c in Model.Coments)
+    {
+        <div class="space10 comDiv">
+            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
+            <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
+            <textarea class="comment " disabled>@c.Content</textarea>
+            <p class="text-right" style="margin:2px; margin-right:10px">
+                <a href="" class="btn btn-info">View >></a>
+            </p>
+        </div>
+    }
+}
+<p class="text-right">
+    <a href="/Comment/Create/@Model.Id?user=Guest" class="btn btn-success">Comment</a>
+</p>
