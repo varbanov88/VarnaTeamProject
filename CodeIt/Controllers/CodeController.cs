@@ -166,7 +166,7 @@ namespace CodeIt.Controllers
 
             }
 
-            if (foundCode)
+            if (!foundCode)
             {
                 return HttpNotFound();
             }

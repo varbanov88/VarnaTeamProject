@@ -1,0 +1,31 @@
+﻿@model CodeIt.Models.CodeModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+        <h2>Delete Paste</h2>
+        @using (Html.BeginForm("Delete", "Code", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.CodeTitle, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextBoxFor(m => m.CodeTitle, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CodeContent, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextAreaFor(m => m.CodeContent, new { @class = "form-control", @readonly = "readonly", @rows = "7" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <a href="/Code/Details/@Model.Id" class="btn btn-primary">Back</a>
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                </div>
+            </div>
+        }
