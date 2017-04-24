@@ -22,7 +22,7 @@ namespace CodeIt.Models
         [Required]
         public string CodeContent { get; set; }
 
-        [Required]
+        
         public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }

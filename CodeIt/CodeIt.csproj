@@ -280,6 +280,7 @@
     <Content Include="Views\Code\CreateAsGuest.cshtml" />
     <Content Include="Views\Code\Delete.cshtml" />
     <Content Include="Views\Code\GuestCodeDetails.cshtml" />
+    <Content Include="Views\Code\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

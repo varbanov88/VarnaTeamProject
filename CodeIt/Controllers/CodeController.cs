@@ -8,6 +8,40 @@ namespace CodeIt.Controllers
 {
     public class CodeController : Controller
     {
+        [Authorize]
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var db = new CodeItDbContext();
+            var code = db.Codes.Find(id);
+            if(code == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(code);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Edit(CodeModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new CodeItDbContext())
+                {
+                    var code = db.Codes.Find(model.Id);
+
+                    code.CodeTitle = model.CodeTitle;
+                    code.CodeContent = model.CodeContent;
+
+                    db.SaveChanges();
+                }
+
+                return RedirectToAction("Details", new { id = model.Id });
+            }
+            return View(model);
+        }
 
         public ActionResult All(int page = 1, string user = null)
         {
