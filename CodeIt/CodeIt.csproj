@@ -204,6 +204,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AllCodesModel.cs" />
+    <Compile Include="Models\AllGuestCodesModel.cs" />
     <Compile Include="Models\CodeDetails.cs" />
     <Compile Include="Models\CodeItDbContext.cs" />
     <Compile Include="Models\CodeModel.cs" />
@@ -284,6 +285,7 @@
     <Content Include="Views\Code\Edit.cshtml" />
     <Content Include="Views\Comment\CreateOnGuest.cshtml" />
     <Content Include="Views\About\About.cshtml" />
+    <Content Include="Views\Code\AllGuest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

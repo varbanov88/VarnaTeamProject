@@ -259,6 +259,32 @@ namespace CodeIt.Controllers
 
             return isAdmin || isAuthor;
         }
+
+        public ActionResult AllGuest(int page = 1)
+        {
+            var pageSize = 10;
+
+            var db = new CodeItDbContext();
+
+            var pasteQuery = db.GuestCodes.AsQueryable();
+
+            var pastes = pasteQuery
+                .OrderByDescending(c => c.Id)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(c => new AllGuestCodesModel
+                {
+                    Id = c.Id,
+                    CodeTitle = c.CodeTitle,
+                    Author = c.Author
+
+                }).ToList();
+
+            ViewBag.CurrentPage = page;
+
+            return View(pastes);
+        }
+
     }
 
 
