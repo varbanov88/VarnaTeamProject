@@ -10,6 +10,10 @@ namespace CodeIt.Models
     //Model for the Code used to store in DATABASE
     public class CodeModel
     {
+        public CodeModel()
+        {
+            this.TimeCreated = DateTime.Now;
+        }
 
         [Key]
         public int Id { get; set; }
@@ -32,5 +36,6 @@ namespace CodeIt.Models
             return this.AuthorId == authorId;
         }
 
+        public DateTime TimeCreated { get; set; }
     }
 }

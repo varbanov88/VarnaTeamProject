@@ -72,7 +72,7 @@ namespace CodeIt.Controllers
                     Id = c.Id,
                     CodeTitle = c.CodeTitle,
                     Author = c.Author.Nickname,
-
+                    TimeCreated = c.TimeCreated
                 }).ToList();
 
             ViewBag.CurrentPage = page;
@@ -276,8 +276,8 @@ namespace CodeIt.Controllers
                 {
                     Id = c.Id,
                     CodeTitle = c.CodeTitle,
-                    Author = c.Author
-
+                    Author = c.Author,
+                    TimeCreated = c.TimeCreated                    
                 }).ToList();
 
             ViewBag.CurrentPage = page;

@@ -9,6 +9,7 @@ namespace CodeIt.Models
         public GuestCodeModel()
         {
             this.Author = "Guest";
+            this.TimeCreated = DateTime.Now;
         }
 
         public int Id { get; set; }
@@ -23,5 +24,7 @@ namespace CodeIt.Models
         public string CodeContent { get; set; }
 
         public string Author { get; set; }
+
+        public DateTime TimeCreated { get; set; }
     }
 }

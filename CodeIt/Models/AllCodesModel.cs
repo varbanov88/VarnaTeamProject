@@ -13,5 +13,7 @@ namespace CodeIt.Models
         public string Author { get; set; }
 
         public string CodeTitle { get; set; }
+
+        public DateTime TimeCreated { get; set; }
     }
 }
