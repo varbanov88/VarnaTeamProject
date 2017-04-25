@@ -279,7 +279,7 @@ namespace CodeIt.Controllers
                     Id = c.Id,
                     CodeTitle = c.CodeTitle,
                     Author = c.Author,
-                    TimeCreated = c.TimeCreated                    
+                    TimeCreated = c.TimeCreated 
                 }).ToList();
 
             ViewBag.CurrentPage = page;
@@ -327,6 +327,54 @@ namespace CodeIt.Controllers
             }
             return View(model);
         }
+        [Authorize]
+        [HttpGet]
+        public ActionResult GuestDelete(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var code = db.GuestCodes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            if (code == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(code);
+
+        }
+
+        [Authorize]
+        [ActionName("Delete")]
+        [HttpPost]
+        public ActionResult GuestConfirmDelete(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var code = db.GuestCodes
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+
+            if (code == null)
+            {
+                return HttpNotFound();
+            }
+
+            db.GuestCodes.Remove(code);
+
+            var comments = db.Comments.Where(c => c.CodeId == id).ToList();
+
+            foreach (var c in comments)
+            {
+                db.Comments.Remove(c);
+            }
+
+            db.SaveChanges();
+            return RedirectToAction("AllGuest");
+        }
+
 
     }
 

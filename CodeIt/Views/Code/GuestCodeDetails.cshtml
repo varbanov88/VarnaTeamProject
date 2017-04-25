@@ -4,8 +4,6 @@
 
 }
 
-
-
 <div class="space20"></div>
 
 <h1>@Model.CodeTitle</h1>
@@ -29,11 +27,11 @@
     </ol>
 </div>
 <p class="text-right">
-    <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a> 
+    <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
     @if (User.IsInRole("Admin"))
             {
         @Html.ActionLink("Edit", "GuestEdit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
-        @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
+        @Html.ActionLink("Delete", "GuestDelete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
     }
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
 </p>
@@ -49,15 +47,15 @@
 
 
 
-
-@{
+@if (Model.Coments.Count > 0)
+{
     foreach (var c in Model.Coments)
     {
         <div class="space10 comDiv">
             <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname.</p>
             <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
-            
-            <textarea  class="comment " disabled>@c.Content</textarea>
+
+            <textarea class="comment " disabled>@c.Content</textarea>
             <p class="text-right" style="margin:2px; margin-right:10px">
                 <a href="" class="btn btn-info">View >></a>
             </p>
