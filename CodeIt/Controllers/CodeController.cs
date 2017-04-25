@@ -159,7 +159,7 @@ namespace CodeIt.Controllers
                 CodeTitle = code.CodeTitle,
                 CodeContent = lines,
                 PrevPage = pPage,
-                Coments = comments
+                Coments = comments,
             };
 
 

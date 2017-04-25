@@ -33,7 +33,7 @@
         @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
         @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
     }
-    <a href="/Comment/Create/@Model.Id?user=Guest" class="btn btn-success">Comment</a>
+    <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
 </p>
 
 <div class="space20"></div>
@@ -52,7 +52,7 @@
     foreach (var c in Model.Coments)
     {
         <div class="space10 comDiv">
-            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
+            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname.</p>
             <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
             
             <textarea  class="comment " disabled>@c.Content</textarea>
@@ -63,5 +63,5 @@
     }
 }
 <p class="text-right">
-    <a href="/Comment/Create/@Model.Id?user=Guest" class="btn btn-success">Comment</a>
+    <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
 </p>

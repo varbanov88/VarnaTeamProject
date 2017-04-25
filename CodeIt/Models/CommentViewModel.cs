@@ -20,7 +20,6 @@ namespace CodeIt.Models
 
         public string AuthorId { get; set; }
 
-        public string TypeOfCode { get; set; }
 
         public virtual User Author { get; set; }
 

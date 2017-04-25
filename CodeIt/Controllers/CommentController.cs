@@ -13,24 +13,8 @@ namespace CodeIt.Controllers
        
         [HttpGet]
         [Authorize]
-        public ActionResult Create(int id, string user = "")
+        public ActionResult Create(int id)
         {
-            if(user == "Guest")
-            {
-                var dbG = new CodeItDbContext();
-                var codeG = dbG.GuestCodes.Find(id).CodeContent
-                    .Split(new string[] { "\r\n", "\n" }
-                    , StringSplitOptions.RemoveEmptyEntries)
-                    .ToList();
-
-                var commentG = new CommentViewModel
-                {
-                    CodeId = id,
-                    Code = codeG,
-                    TypeOfCode = user
-                };
-                return View(commentG);
-            }
           
             
             var db = new CodeItDbContext();
@@ -42,7 +26,7 @@ namespace CodeIt.Controllers
             var comment = new CommentViewModel
             {
                 CodeId = id,
-                Code = code
+                Code = code,
             };
             return View(comment);
 
@@ -58,8 +42,7 @@ namespace CodeIt.Controllers
             if (ModelState.IsValid)
             {
 
-                if(model.TypeOfCode != "Guest")
-                {
+               
                     var db = new CodeItDbContext();
 
                     var authorId = User.Identity.GetUserId();
@@ -74,9 +57,46 @@ namespace CodeIt.Controllers
                     db.SaveChanges();
 
 
-                    return RedirectToAction("Details", "Code", new { model.Id });
-                }
+                    return RedirectToAction("Details", "Code", new { id = model.Id });
 
+            }
+
+            return View(model);
+        }
+
+
+
+        [HttpGet]
+        [Authorize]
+        public ActionResult CreateOnGuest(int id)
+        {
+            
+                var dbG = new CodeItDbContext();
+                var codeG = dbG.GuestCodes.Find(id).CodeContent
+                    .Split(new string[] { "\r\n", "\n" }
+                    , StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+
+            
+
+            var commentG = new CommentViewModel
+                {
+                    CodeId = id,
+                    Code = codeG,
+                    
+                };
+                return View(commentG);
+
+
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateInput(false)]
+        public ActionResult CreateOnGuest(CommentViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
 
                 var dbG = new CodeItDbContext();
 
@@ -85,8 +105,8 @@ namespace CodeIt.Controllers
                 dbG.CommentsOnGuest.Add(new CommentOnGuest
                 {
                     CodeId = model.Id,
-                    AuthorId = authorIdG,
-                    Content = model.Content
+                    Content = model.Content,
+                    AuthorId = authorIdG
                 });
 
                 dbG.SaveChanges();
