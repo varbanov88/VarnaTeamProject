@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace CodeIt.Models
 {
@@ -10,6 +7,11 @@ namespace CodeIt.Models
     //Model for the Comment used to store in DATABASE
     public class Comment
     {
+        public Comment()
+        {
+            this.TimeCreated = DateTime.Now;
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -23,5 +25,6 @@ namespace CodeIt.Models
 
         public virtual User Author { get; set; }
 
+        public DateTime TimeCreated { get; set; }
     }
 }

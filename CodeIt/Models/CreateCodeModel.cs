@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CodeIt.Models
 {
@@ -14,7 +13,5 @@ namespace CodeIt.Models
         [Required(ErrorMessage = "Code is required")]
         [Display(Name = "Your Code")]
         public string CodeContent { get; set; }
-
-
     }
 }

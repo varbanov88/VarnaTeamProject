@@ -1,22 +1,18 @@
 ﻿using CodeIt.Models;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CodeIt.Controllers
 {
     public class CommentController : Controller
     {
-       
+
         [HttpGet]
         [Authorize]
         public ActionResult Create(int id)
         {
-          
-            
             var db = new CodeItDbContext();
             var code = db.Codes.Find(id).CodeContent
                     .Split(new string[] { "\r\n", "\n" }
@@ -29,9 +25,6 @@ namespace CodeIt.Controllers
                 Code = code,
             };
             return View(comment);
-
-
-
         }
 
         [HttpPost]
@@ -41,24 +34,20 @@ namespace CodeIt.Controllers
         {
             if (ModelState.IsValid)
             {
+                var db = new CodeItDbContext();
 
-               
-                    var db = new CodeItDbContext();
+                var authorId = User.Identity.GetUserId();
 
-                    var authorId = User.Identity.GetUserId();
+                db.Comments.Add(new Comment
+                {
+                    CodeId = model.Id,
+                    AuthorId = authorId,
+                    Content = model.Content
+                });
 
-                    db.Comments.Add(new Comment
-                    {
-                        CodeId = model.Id,
-                        AuthorId = authorId,
-                        Content = model.Content
-                    });
+                db.SaveChanges();
 
-                    db.SaveChanges();
-
-
-                    return RedirectToAction("Details", "Code", new { id = model.Id });
-
+                return RedirectToAction("Details", "Code", new { id = model.Id });
             }
 
             return View(model);
@@ -70,22 +59,22 @@ namespace CodeIt.Controllers
         [Authorize]
         public ActionResult CreateOnGuest(int id)
         {
-            
-                var dbG = new CodeItDbContext();
-                var codeG = dbG.GuestCodes.Find(id).CodeContent
-                    .Split(new string[] { "\r\n", "\n" }
-                    , StringSplitOptions.RemoveEmptyEntries)
-                    .ToList();
 
-            
+            var dbG = new CodeItDbContext();
+            var codeG = dbG.GuestCodes.Find(id).CodeContent
+                .Split(new string[] { "\r\n", "\n" }
+                , StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
+
 
             var commentG = new CommentViewModel
-                {
-                    CodeId = id,
-                    Code = codeG,
-                    
-                };
-                return View(commentG);
+            {
+                CodeId = id,
+                Code = codeG,
+
+            };
+            return View(commentG);
 
 
         }

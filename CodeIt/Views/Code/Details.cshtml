@@ -50,8 +50,6 @@
     @{
         if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.isAuthor(User.Identity.GetUserId())))
         {
-           
-
             <a href="/Code/Edit/@Model.Id" class="btn btn-success">Edit</a>
             <a href="/Code/Delete/@Model.Id" class="btn btn-danger">Delete X</a>
         }
@@ -88,7 +86,7 @@
             {
                 <div class="space10 comDiv">
                     <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
-                    <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
+                    <p style="margin-left:10px">#Date: @c.TimeCreated</p>
                     <textarea onprogress="auto_grow(this)" id="area" class="comment " >@c.Content</textarea>
                     <p class="text-right" style="margin:2px; margin-right:10px">
                         <a href="" class="btn btn-danger">Delete X</a>

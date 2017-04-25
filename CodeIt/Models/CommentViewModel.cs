@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace CodeIt.Models
 {
@@ -24,5 +22,7 @@ namespace CodeIt.Models
         public virtual User Author { get; set; }
 
         public List<string> Code { get; set; }
+
+        public DateTime TimeCreated { get; set; }
     }
 }
