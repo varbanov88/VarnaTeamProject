@@ -347,7 +347,7 @@ namespace CodeIt.Controllers
         }
 
         [Authorize]
-        [ActionName("Delete")]
+        [ActionName("GuestDelete")]
         [HttpPost]
         public ActionResult GuestConfirmDelete(int id)
         {
