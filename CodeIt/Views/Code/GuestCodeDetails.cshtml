@@ -27,7 +27,7 @@
     </ol>
 </div>
 <p class="text-right">
-    <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a> 
+    <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a> 
     @if (User.IsInRole("Admin"))
             {
         @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
