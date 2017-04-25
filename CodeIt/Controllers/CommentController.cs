@@ -10,10 +10,7 @@ namespace CodeIt.Controllers
 {
     public class CommentController : Controller
     {
-        
-
-
-
+       
         [HttpGet]
         [Authorize]
         public ActionResult Create(int id, string user = "")
@@ -61,7 +58,7 @@ namespace CodeIt.Controllers
             if (ModelState.IsValid)
             {
 
-                if(model.TypeOfCode == "")
+                if(model.TypeOfCode != "Guest")
                 {
                     var db = new CodeItDbContext();
 

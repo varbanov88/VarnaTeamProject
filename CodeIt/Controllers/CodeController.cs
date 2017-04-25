@@ -24,6 +24,7 @@ namespace CodeIt.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(CodeModel model)
         {
             if (ModelState.IsValid )
@@ -144,6 +145,10 @@ namespace CodeIt.Controllers
         {
             var db = new CodeItDbContext();
             var code = db.GuestCodes.Where(c => c.Id == id).FirstOrDefault();
+            if(code == null)
+            {
+                return HttpNotFound();
+            }
             var lines = code.CodeContent.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
             var comments = db.CommentsOnGuest.Where(c => c.CodeId == id).ToList();

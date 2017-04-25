@@ -14,12 +14,12 @@ namespace CodeIt.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Title needed")]
         [Display(Name = "Code Title")]
         [StringLength(200)]
         public string CodeTitle { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Content Needed")]
         public string CodeContent { get; set; }
 
         

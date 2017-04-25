@@ -42,46 +42,62 @@
 
     
     <a href="/Code/All?user=@Model.ContactInfo" class="btn btn-primary">See More Codes From this User</a>
-         @{
-             if(User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.isAuthor(User.Identity.GetUserId())))
-             {
-
-                @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
-                @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
-             }
-        }   
-         
     <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
 </p>
-<div class="space20"></div>
-<div class="space20"></div>
-<h2>Comments</h2>
+<div class="text-left">
+    @{
+        if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.isAuthor(User.Identity.GetUserId())))
+        {
+           
 
-<div class="space20"></div>
-<div class="space20"></div>
-<div class="space20"></div>
-<div class="space20"></div>
+            <a href="/Code/Edit/@Model.Id" class="btn btn-success">Edit</a>
+            <a href="/Code/Delete/@Model.Id" class="btn btn-danger">Delete X</a>
+        }
+    }
+</div>
+
+<hr class="lyne"/>
+
+
+<script>
+    function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight) + "px";
+        
+    }
+</script>
+
+
 
 @{
-    foreach (var c in Model.Coments)
+    if (Model.Coments.Count != 0)
     {
-        <div class="space10 comDiv">
-            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
-            <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
-            <textarea class="comment " disabled>@c.Content</textarea>
-            <p class="text-right" style="margin:2px; margin-right:10px">
-                <a href="" class="btn btn-danger">Delete X</a>
-                <a href="" class="btn btn-success">Edit</a>
+        <div class="space20"></div>
+        <div class="space20"></div>
+        <h2>Comments</h2>
+
+        <div class="space20"></div>
+        <div class="space20"></div>
+        <div class="space20"></div>
+        <div class="space20"></div>
+
+        
+            foreach (var c in Model.Coments)
+            {
+                <div class="space10 comDiv">
+                    <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
+                    <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
+                    <textarea onprogress="auto_grow(this)" id="area" class="comment " >@c.Content</textarea>
+                    <p class="text-right" style="margin:2px; margin-right:10px">
+                        <a href="" class="btn btn-danger">Delete X</a>
+                        <a href="" class="btn btn-success">Edit</a>
+                    </p>
+                </div>
+            }
+        
+            <p class="text-right">
+                <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
             </p>
-        </div>
-
-       
-            
-       
-       
-
-    }
+      }
 }
-<p class="text-right">
-    <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
-</p>
+
