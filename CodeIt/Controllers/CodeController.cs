@@ -9,8 +9,7 @@ namespace CodeIt.Controllers
     public class CodeController : Controller
     {
 
-
-        public ActionResult All(int page = 1, string user=null)
+        public ActionResult All(int page = 1, string user = null)
         {
             var pageSize = 10;
 
@@ -18,7 +17,7 @@ namespace CodeIt.Controllers
 
             var pasteQuery = db.Codes.AsQueryable();
 
-            if(user != null)
+            if (user != null)
             {
                 pasteQuery = pasteQuery
                     .Where(c => c.Author.Email == user);
@@ -41,7 +40,7 @@ namespace CodeIt.Controllers
             return View(pastes);
         }
 
-        public ActionResult Details(int id, int pPage=1)
+        public ActionResult Details(int id, int pPage = 1)
         {
             var db = new CodeItDbContext();
             var code = db.Codes.Where(c => c.Id == id).FirstOrDefault();
@@ -53,14 +52,14 @@ namespace CodeIt.Controllers
                 Id = id,
                 Author = code.Author.Nickname,
                 CodeTitle = code.CodeTitle,
-                CodeContent = lines,           
+                CodeContent = lines,
                 PrevPage = pPage,
                 ContactInfo = code.Author.Email,
                 Coments = comments
             };
-            
 
-            if(code == null)
+
+            if (code == null)
             {
                 return HttpNotFound();
             }
@@ -69,13 +68,12 @@ namespace CodeIt.Controllers
         }
 
 
-       [HttpGet]
-       [Authorize]
-       public ActionResult Create()
+        [HttpGet]
+        [Authorize]
+        public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateInput(false)]
@@ -86,13 +84,12 @@ namespace CodeIt.Controllers
             {
                 var db = new CodeItDbContext();
 
-                var code = db.Codes.Add(new CodeModel {
+                var code = db.Codes.Add(new CodeModel
+                {
                     CodeTitle = model.CodeTitle,
                     CodeContent = model.CodeContent,
-                    AuthorId = User.Identity.GetUserId()      
+                    AuthorId = User.Identity.GetUserId()
                 });
-
-                
 
                 db.SaveChanges();
 
@@ -101,5 +98,42 @@ namespace CodeIt.Controllers
             }
             return View(model);
         }
+
+        
+        //Action for GuestPosts
+
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult CreateAsGuest()
+        {
+            return View();
+        }
+
+        //Action for GuestPosts
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult CreateAsGuest(PasteAsGuest model)
+        {
+            if (ModelState.IsValid)
+            {
+                var db = new CodeItDbContext();
+
+                var code = db.Codes.Add(new CodeModel
+                {
+                    CodeTitle = model.CodeTitle,
+                    CodeContent = model.CodeContent,
+ 
+                });
+
+                db.SaveChanges();
+
+                return RedirectToAction("Details", new { model.Id });
+
+            }
+            return View(model);
+        }
     }
+
+      
 }

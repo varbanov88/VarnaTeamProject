@@ -12,7 +12,7 @@ namespace CodeIt.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Code Comment")]
+        [Display(Name = "Code Comments")]
         public string Content { get; set; }
 
         public int CodeId { get; set; }

@@ -203,6 +203,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AllCodesModel.cs" />
+    <Compile Include="Models\PasteAsGuest.cs" />
     <Compile Include="Models\CodeDetails.cs" />
     <Compile Include="Models\CodeItDbContext.cs" />
     <Compile Include="Models\CodeModel.cs" />
@@ -274,6 +275,7 @@
     <Content Include="Views\Code\Details.cshtml" />
     <Content Include="Views\Code\All.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
+    <Content Include="Views\Code\PasteAsGuest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
