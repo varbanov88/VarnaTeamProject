@@ -1,0 +1,36 @@
+﻿@model CodeIt.Models.GuestCodeModel
+@{
+    ViewBag.Title = "Edit Paste";
+}
+<div class="space20"></div>
+
+
+@Html.ValidationSummary("", new { @class = "text-danger" })
+
+<div class="space10"></div>
+
+@using (Html.BeginForm("GuestEdit", "Code", FormMethod.Post))
+{
+
+
+
+    <div class="container">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CodeTitle, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(m => m.CodeTitle, new { @class = "form-control"})
+        </div>
+        <div class="space20"></div>
+        <div class="space20"></div>
+        @Html.LabelFor(m => m.CodeContent, new { @class = "control-label col-md-2" })
+        <textarea class="form-control paste_textarea" cols="100" data-val="true" data-val-required="The CodeContent field is required." id="CodeContent" name="CodeContent" style="resize: horizontal; height: 400px;">@Model.CodeContent</textarea>
+    </div>
+
+    <br>
+    <div class="form-group">
+        <div class="text-right">
+            <a href="/Code/GuestCodeDetails/@Model.Id" class="btn btn-primary">Back</a>
+            <input type="submit" value="Edit" class="btn btn-success" />
+        </div>
+    </div>
+}

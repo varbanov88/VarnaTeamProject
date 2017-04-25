@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -42,6 +43,6 @@ namespace CodeIt.Models
             return this.AuthorId == authorId;
         }
 
-
+        public DateTime TimeCreated { get; set; }
     }
 }

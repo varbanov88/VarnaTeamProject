@@ -14,6 +14,8 @@
 
 <h2>@Model.Author</h2>
 
+<h4>Code creation date: @Model.TimeCreated</h4>
+
 <div class="space20"></div>
 
 
@@ -30,7 +32,7 @@
     <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a> 
     @if (User.IsInRole("Admin"))
             {
-        @Html.ActionLink("Edit", "Edit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Edit", "GuestEdit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
         @Html.ActionLink("Delete", "Delete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
     }
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>

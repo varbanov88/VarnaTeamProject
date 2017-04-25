@@ -286,6 +286,7 @@
     <Content Include="Views\Comment\CreateOnGuest.cshtml" />
     <Content Include="Views\About\About.cshtml" />
     <Content Include="Views\Code\AllGuest.cshtml" />
+    <Content Include="Views\Code\GuestEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

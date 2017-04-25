@@ -29,5 +29,7 @@ namespace CodeIt.Models
         public int PrevPage { get; set; }
 
         public List<CommentOnGuest> Coments { get; set; }
+
+        public DateTime TimeCreated { get; set; }
     }
 }

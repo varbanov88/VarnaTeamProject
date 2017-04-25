@@ -97,7 +97,8 @@ namespace CodeIt.Controllers
                 ContactInfo = code.Author.Email,
                 Coments = comments,
                 AuthorId = code.AuthorId,
-                MyUser = myUser
+                MyUser = myUser,
+                TimeCreated = code.TimeCreated
             };
 
 
@@ -160,6 +161,7 @@ namespace CodeIt.Controllers
                 CodeContent = lines,
                 PrevPage = pPage,
                 Coments = comments,
+                TimeCreated = code.TimeCreated
             };
 
 
@@ -283,6 +285,47 @@ namespace CodeIt.Controllers
             ViewBag.CurrentPage = page;
 
             return View(pastes);
+        }
+
+        [Authorize]
+        [HttpGet]
+        public ActionResult GuestEdit(int id)
+        {
+            var db = new CodeItDbContext();
+            var code = db.GuestCodes.Find(id);
+            if (code == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(code);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult GuestEdit(GuestCodeModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new CodeItDbContext())
+                {
+                    var code = db.GuestCodes.Find(model.Id);
+
+                    if (code == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    code.CodeTitle = model.CodeTitle;
+                    code.CodeContent = model.CodeContent;
+
+                    db.SaveChanges();
+                }
+
+                return RedirectToAction("GuestCodeDetails", new { id = model.Id });
+            }
+            return View(model);
         }
 
     }
