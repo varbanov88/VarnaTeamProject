@@ -188,6 +188,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CodeController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\Code\GuestCodeDetails.cshtml" />
     <Content Include="Views\Code\Edit.cshtml" />
     <Content Include="Views\Comment\CreateOnGuest.cshtml" />
+    <Content Include="Views\About\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
