@@ -28,22 +28,30 @@
 </div>
 <p class="text-right">
     <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
-    @if (User.IsInRole("Admin"))
-            {
-        @Html.ActionLink("Edit", "GuestEdit", "Code", new { @id = Model.Id }, new { @class = "btn btn-success" })
-        @Html.ActionLink("Delete", "GuestDelete", "Code", new { @id = Model.Id }, new { @class = "btn btn-danger" })
-    }
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
+    @if (User.IsInRole("Admin"))
+    {    
+        <p class="text-left">
+            <a href="/Code/GuestEdit/@Model.Id" class="btn btn-success">Edit</a>
+            <a href="/Code/GuestDelete/@Model.Id" class="btn btn-danger">Delete</a>
+        </p>
+    }
+    
 </p>
 
 <div class="space20"></div>
 <div class="space20"></div>
-<h2>Comments</h2>
+@if (Model.Coments.Count != 0)
+{
+    <h2>Comments</h2>
+    <div class="space20"></div>
+    <div class="space20"></div>
+    <div class="space20"></div>
+    <div class="space20"></div>
 
-<div class="space20"></div>
-<div class="space20"></div>
-<div class="space20"></div>
-<div class="space20"></div>
+}
+
+
 
 
 
@@ -52,8 +60,8 @@
     foreach (var c in Model.Coments)
     {
         <div class="space10 comDiv">
-            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname.</p>
-            <p style="margin-left:10px">#Date: Ex: 24.03.2017</p>
+            <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
+            <p style="margin-left:10px">Date: @c.TimeCreated</p>
 
             <textarea class="comment " disabled>@c.Content</textarea>
             <p class="text-right" style="margin:2px; margin-right:10px">
@@ -62,6 +70,12 @@
         </div>
     }
 }
-<p class="text-right">
-    <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
-</p>
+
+@{
+    if (Model.Coments.Count > 8)
+    {
+        <p class="text-right">
+            <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
+        </p>
+    }
+}

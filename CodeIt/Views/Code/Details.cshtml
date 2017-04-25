@@ -87,18 +87,21 @@
             {
                 <div class="space10 comDiv">
                     <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
-                    <p style="margin-left:10px">#Date: @c.TimeCreated</p>
+                    <p style="margin-left:10px">Date: @c.TimeCreated</p>
                     <textarea onprogress="auto_grow(this)" id="area" class="comment " >@c.Content</textarea>
                     <p class="text-right" style="margin:2px; margin-right:10px">
                         <a href="" class="btn btn-danger">Delete X</a>
                         <a href="" class="btn btn-success">Edit</a>
                     </p>
                 </div>
-            }
-        
+        }
+        if (Model.Coments.Count > 8)
+        {
             <p class="text-right">
                 <a href="/Comment/Create/@Model.Id" class="btn btn-success">Comment</a>
             </p>
-      }
+        }
+
+    }
 }
 

@@ -364,11 +364,11 @@ namespace CodeIt.Controllers
 
             db.GuestCodes.Remove(code);
 
-            var comments = db.Comments.Where(c => c.CodeId == id).ToList();
+            var comments = db.CommentsOnGuest.Where(c => c.CodeId == id).ToList();
 
             foreach (var c in comments)
             {
-                db.Comments.Remove(c);
+                db.CommentsOnGuest.Remove(c);
             }
 
             db.SaveChanges();
