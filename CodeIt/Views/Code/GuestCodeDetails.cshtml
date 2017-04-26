@@ -26,18 +26,24 @@
 
     </ol>
 </div>
+
 <p class="text-right">
     <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
+
     @if (User.IsInRole("Admin"))
-    {    
-        <p class="text-left">
-            <a href="/Code/GuestEdit/@Model.Id" class="btn btn-success">Edit</a>
-            <a href="/Code/GuestDelete/@Model.Id" class="btn btn-danger">Delete</a>
-        </p>
+    {
+
+    <p class="text-left">
+        <a href="/Code/GuestEdit/@Model.Id" class="btn btn-success">Edit</a>
+        <a href="/Code/GuestDelete/@Model.Id" class="btn btn-danger">Delete</a>
+    </p>
+
     }
-    
+
 </p>
+    
+
 
 <div class="space20"></div>
 <div class="space20"></div>

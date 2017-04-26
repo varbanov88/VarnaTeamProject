@@ -8,6 +8,47 @@ namespace CodeIt.Controllers
 {
     public class CommentController : Controller
     {
+        [Authorize]
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var db = new CodeItDbContext();
+            var comment = db.Comments.Find(id);
+            if(comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(comment);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConf(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var comment = db.Comments.Find(id);
+
+            if(comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            var codeId = comment.CodeId;
+
+            db.Comments.Remove(comment);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Details" , "Code" , new { id = codeId });
+
+        }
+
+
+
+
 
         [HttpGet]
         [Authorize]
