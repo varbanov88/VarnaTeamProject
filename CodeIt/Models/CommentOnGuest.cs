@@ -25,5 +25,10 @@ namespace CodeIt.Models
         public virtual User Author { get; set; }
 
         public DateTime TimeCreated { get; set; }
+
+        public bool IsAuthor (string authorId)
+        {
+            return this.AuthorId == authorId;
+        }
     }
 }

@@ -90,8 +90,12 @@
                     <p style="margin-left:10px">Date: @c.TimeCreated</p>
                     <textarea onprogress="auto_grow(this)" id="area" class="comment " >@c.Content</textarea>
                     <p class="text-right" style="margin:2px; margin-right:10px">
-                        <a href="/Comment/Delete/@c.Id" class="btn btn-danger">Delete X</a>
-                        <a href="/Comment/Edit/@c.Id" class="btn btn-success">Edit</a>
+                        @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || c.IsAuthor(User.Identity.GetUserId())))
+                        {
+                            <a href="/Comment/Delete/@c.Id" class="btn btn-danger">Delete X</a>
+                            <a href="/Comment/Edit/@c.Id" class="btn btn-success">Edit</a>
+                        }
+                        
                     </p>
                 </div>
         }

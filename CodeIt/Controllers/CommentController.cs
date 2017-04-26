@@ -6,8 +6,30 @@ using System.Web.Mvc;
 
 namespace CodeIt.Controllers
 {
+    //Handle the Comment Functionality
     public class CommentController : Controller
     {
+
+        //Helper method. Check if User is Author of comment or Admin
+        private bool IsAuthorised(Comment comment)
+        {
+            var isAdmin = this.User.IsInRole("Admin");
+            var isAuthor = comment.IsAuthor(this.User.Identity.GetUserId());
+
+            return isAdmin || isAuthor;
+        }
+
+        //Helper method. Check if User is Author of a comment on guest paste or Admin
+        private bool IsAuthorisedOnGuest(CommentOnGuest comment)
+        {
+            var isAdmin = this.User.IsInRole("Admin");
+            var isAuthor = comment.IsAuthor(this.User.Identity.GetUserId());
+
+            return isAdmin || isAuthor;
+        }
+
+
+
         [Authorize]
         [HttpGet]
         public ActionResult EditOnGuest(int id)
@@ -16,7 +38,7 @@ namespace CodeIt.Controllers
 
             var comment = db.CommentsOnGuest.Find(id);
 
-            if (comment == null)
+            if (comment == null || !IsAuthorisedOnGuest(comment))
             {
                 return HttpNotFound();
             }
@@ -34,7 +56,7 @@ namespace CodeIt.Controllers
 
                 var comment = db.CommentsOnGuest.Find(model.Id);
 
-                if (comment == null)
+                if (comment == null || !IsAuthorisedOnGuest(comment))
                 {
                     return HttpNotFound();
                 }
@@ -59,7 +81,7 @@ namespace CodeIt.Controllers
         {
             var db = new CodeItDbContext();
             var comment = db.CommentsOnGuest.Find(id);
-            if (comment == null)
+            if (comment == null || !IsAuthorisedOnGuest(comment))
             {
                 return HttpNotFound();
             }
@@ -76,7 +98,7 @@ namespace CodeIt.Controllers
 
             var comment = db.CommentsOnGuest.Find(id);
 
-            if (comment == null)
+            if (comment == null || !IsAuthorisedOnGuest(comment))
             {
                 return HttpNotFound();
             }
@@ -101,7 +123,7 @@ namespace CodeIt.Controllers
 
             var comment = db.Comments.Find(id);
 
-            if(comment == null)
+            if(comment == null || !IsAuthorised(comment))
             {
                 return HttpNotFound();
             }
@@ -119,7 +141,7 @@ namespace CodeIt.Controllers
 
                 var comment = db.Comments.Find(model.Id);
 
-                if(comment == null)
+                if(comment == null || !IsAuthorised(comment))
                 {
                     return HttpNotFound();
                 }
@@ -143,7 +165,7 @@ namespace CodeIt.Controllers
         {
             var db = new CodeItDbContext();
             var comment = db.Comments.Find(id);
-            if(comment == null)
+            if(comment == null || !IsAuthorised(comment))
             {
                 return HttpNotFound();
             }
@@ -160,7 +182,7 @@ namespace CodeIt.Controllers
 
             var comment = db.Comments.Find(id);
 
-            if(comment == null)
+            if(comment == null || !IsAuthorised(comment))
             {
                 return HttpNotFound();
             }

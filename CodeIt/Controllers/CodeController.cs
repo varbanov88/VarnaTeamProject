@@ -6,8 +6,21 @@ using System.Web.Mvc;
 
 namespace CodeIt.Controllers
 {
+    //Handle operations with pasted Codes
     public class CodeController : Controller
     {
+       
+        //Helper method. Check if User is an Author of a Paste or Admin
+        private bool IsAuthorised(CodeModel code)
+        {
+            var isAdmin = this.User.IsInRole("Admin");
+            var isAuthor = code.IsAuthor(this.User.Identity.GetUserId());
+
+            return isAdmin || isAuthor;
+        }
+
+
+
         [Authorize]
         [HttpGet]
         public ActionResult Edit(int id)
@@ -251,16 +264,7 @@ namespace CodeIt.Controllers
 
         }
 
-        /// <summary>
-        /// Authorisation helper function
-        /// </summary>
-        private bool IsAuthorised(CodeModel code)
-        {
-            var isAdmin = this.User.IsInRole("Admin");
-            var isAuthor = code.isAuthor(this.User.Identity.GetUserId());
-
-            return isAdmin || isAuthor;
-        }
+        
 
         public ActionResult AllGuest(int page = 1)
         {
@@ -293,7 +297,7 @@ namespace CodeIt.Controllers
         {
             var db = new CodeItDbContext();
             var code = db.GuestCodes.Find(id);
-            if (code == null)
+            if (code == null || !this.User.IsInRole("Admin"))
             {
                 return HttpNotFound();
             }
@@ -312,7 +316,7 @@ namespace CodeIt.Controllers
                 {
                     var code = db.GuestCodes.Find(model.Id);
 
-                    if (code == null)
+                    if (code == null || !this.User.IsInRole("Admin"))
                     {
                         return HttpNotFound();
                     }
@@ -337,7 +341,7 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            if (code == null)
+            if (code == null || !this.User.IsInRole("Admin"))
             {
                 return HttpNotFound();
             }
@@ -357,7 +361,7 @@ namespace CodeIt.Controllers
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
 
-            if (code == null)
+            if (code == null || !this.User.IsInRole("Admin"))
             {
                 return HttpNotFound();
             }

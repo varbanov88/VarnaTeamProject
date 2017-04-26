@@ -1,4 +1,6 @@
 ﻿@model CodeIt.Models.GuestCodeDetailsModel
+    @using Microsoft.AspNet.Identity
+
 @{
     ViewBag.Title = "Details";
 
@@ -71,8 +73,12 @@
 
             <textarea class="comment " disabled>@c.Content</textarea>
             <p class="text-right" style="margin:2px; margin-right:10px">
-                <a href="/Comment/DeleteOnGuest/@c.Id" class="btn btn-danger">Delete X</a>
-                <a href="/Comment/EditOnGuest/@c.Id" class="btn btn-success">Edit</a>
+                @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || c.IsAuthor(User.Identity.GetUserId())))
+                {
+                    <a href="/Comment/DeleteOnGuest/@c.Id" class="btn btn-danger">Delete X</a>
+                    <a href="/Comment/EditOnGuest/@c.Id" class="btn btn-success">Edit</a>
+                }
+                
             </p>
         </div>
     }
