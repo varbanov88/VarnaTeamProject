@@ -71,7 +71,8 @@
 
             <textarea class="comment " disabled>@c.Content</textarea>
             <p class="text-right" style="margin:2px; margin-right:10px">
-                <a href="" class="btn btn-info">View >></a>
+                <a href="/Comment/DeleteOnGuest/@c.Id" class="btn btn-danger">Delete X</a>
+                <a href="/Comment/Edit/@c.Id" class="btn btn-success">Edit</a>
             </p>
         </div>
     }

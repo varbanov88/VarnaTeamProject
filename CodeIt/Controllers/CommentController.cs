@@ -10,6 +10,46 @@ namespace CodeIt.Controllers
     {
         [Authorize]
         [HttpGet]
+        public ActionResult DeleteOnGuest(int id)
+        {
+            var db = new CodeItDbContext();
+            var comment = db.CommentsOnGuest.Find(id);
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(comment);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ActionName("DeleteOnGuest")]
+        public ActionResult DeleteOnGuestConf(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var comment = db.CommentsOnGuest.Find(id);
+
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            var codeId = comment.CodeId;
+
+            db.CommentsOnGuest.Remove(comment);
+
+            db.SaveChanges();
+
+            return RedirectToAction("GuestCodeDetails", "Code", new { id = codeId });
+
+        }
+
+
+
+        [Authorize]
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             var db = new CodeItDbContext();
