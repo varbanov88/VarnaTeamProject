@@ -1,0 +1,26 @@
+﻿@model CodeIt.Models.CommentOnGuest
+@{
+    ViewBag.Title = "Edit Comment";
+}
+<div class="space20"></div>
+
+@using (Html.BeginForm("EditOnGuest", "Comment", FormMethod.Post))
+{
+
+    <div class="container">
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Content, new { @class = "control-label col-sm-4" })
+            <div class="col-sm-4">
+                @Html.TextAreaFor(m => m.Content, new { @class = "form-control comment", @style = "height: 200px; width: 400px" })
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-sm-4 col-sm-offset-4">
+        <a href="/Code/GuestCodeDetails/@Model.CodeId" class="btn btn-primary">Back</a>
+        <input type="submit" value="Edit" class="btn btn-success" />
+    </div>
+
+}
