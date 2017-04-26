@@ -62,7 +62,7 @@
 
 <script>
     function auto_grow(element) {
-        element.style.height = "5px";
+        element.style.height = "200px";
         element.style.height = (element.scrollHeight) + "px";
         
     }
@@ -88,7 +88,7 @@
                 <div class="space10 comDiv">
                     <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
                     <p style="margin-left:10px">Date: @c.TimeCreated</p>
-                    <textarea onprogress="auto_grow(this)" id="area" class="comment " >@c.Content</textarea>
+                    <textarea onload="auto_grow(this)" class="comment" disabled>@c.Content</textarea>
                     <p class="text-right" style="margin:2px; margin-right:10px">
                         @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || c.IsAuthor(User.Identity.GetUserId())))
                         {
