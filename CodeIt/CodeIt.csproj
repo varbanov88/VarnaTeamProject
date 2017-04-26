@@ -289,6 +289,7 @@
     <Content Include="Views\Code\GuestEdit.cshtml" />
     <Content Include="Views\Code\GuestDelete.cshtml" />
     <Content Include="Views\Comment\Delete.cshtml" />
+    <Content Include="Views\Comment\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

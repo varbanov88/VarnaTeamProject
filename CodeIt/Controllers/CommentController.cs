@@ -10,6 +10,50 @@ namespace CodeIt.Controllers
     {
         [Authorize]
         [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var db = new CodeItDbContext();
+
+            var comment = db.Comments.Find(id);
+
+            if(comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(comment);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Edit(Comment model)
+        {
+            if (ModelState.IsValid)
+            {
+                var db = new CodeItDbContext();
+
+                var comment = db.Comments.Find(model.Id);
+
+                if(comment == null)
+                {
+                    return HttpNotFound();
+                }
+
+                comment.Content = model.Content;
+                comment.TimeCreated = DateTime.Now;
+
+                db.SaveChanges();
+
+                return RedirectToAction("Details", "Code", new { id = comment.CodeId });
+            }
+            return View(model);
+        }
+
+
+
+
+        [Authorize]
+        [HttpGet]
         public ActionResult Delete(int id)
         {
             var db = new CodeItDbContext();
