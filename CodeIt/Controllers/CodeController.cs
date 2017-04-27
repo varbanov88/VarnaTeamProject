@@ -62,13 +62,20 @@ namespace CodeIt.Controllers
             return View(model);
         }
 
-        public ActionResult All(int page = 1, string user = null)
+        public ActionResult All(string search, int page = 1, string user = null)
         {
             var pageSize = 10;
 
             var db = new CodeItDbContext();
 
             var pasteQuery = db.Codes.AsQueryable();
+
+            if (search != null)
+            {
+                pasteQuery = pasteQuery
+                    .Where(p => p.CodeTitle.ToLower().Contains(search.ToLower())
+                    || p.CodeTitle.ToLower().Contains(search.ToLower()));
+            }
 
             if (user != null)
             {

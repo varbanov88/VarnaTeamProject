@@ -12,15 +12,12 @@
 {
     <h1 class="text-center">No more codes!</h1>
 }
-else
+@using (Html.BeginForm("AllGuest", "Code", FormMethod.Get))
 {
-    using (Html.BeginForm("AllGuest", "Code", FormMethod.Get))
-    {
-        <div class="text-center">
-            <input type="text" class="form-control" name="search" style="display: inline-block" value="@Request.QueryString["search"]"/>
-            <input type="submit" value="Search" class="btn btn-default" />
-        </div>
-    }
+    <div class="text-center">
+        <input type="text" class="form-control" name="search" style="display: inline-block" value="@Request.QueryString["search"]" />
+        <input type="submit" value="Search" class="btn btn-default" />
+    </div>
 }
 
 @foreach (var code in Model)
