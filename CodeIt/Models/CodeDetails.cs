@@ -36,6 +36,10 @@ namespace CodeIt.Models
         //Optional | if you are in My codes tell the user
         public string MyUser { get; set; }
 
+        //Optional | tells the search if it is not null
+
+        public string MySearch { get; set; }
+
         public List<Comment> Coments {get;set;}
 
         public bool isAuthor(string authorId)

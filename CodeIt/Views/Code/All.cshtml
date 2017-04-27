@@ -11,6 +11,8 @@
 {
     <h1 class="text-center">No more codes!</h1>
 }
+
+
 @using (Html.BeginForm("All", "Code", FormMethod.Get))
 {
     if (Request.QueryString["user"] != null)
@@ -34,12 +36,15 @@
         <h4>@code.TimeCreated</h4>
 
         @{
-            var currUserQuery1 = Request.QueryString["user"];
+            var currUser1 = Request.QueryString["user"];
+            var currSearch1 = Request.QueryString["search"];
 
+            var currUserQuery1 = currUser1 != null ? "&myUser=" + currUser1 : string.Empty;
+            var currSearchQuery1 = currSearch1 != null ? "&mySearch=" + currSearch1 : string.Empty;
         }
 
 
-        <a href="/Code/Details/@code.Id?pPage=@ViewBag.CurrentPage@(currUserQuery1 != null ? "&myUser=" + currUserQuery1 : string.Empty)" class="btn btn-info">See more >></a>
+        <a href="/Code/Details/@code.Id?pPage=@ViewBag.CurrentPage@currUserQuery1@currSearchQuery1" class="btn btn-info">See more >></a>
     </div>
 
             
@@ -56,7 +61,7 @@
     var currentSearch = Request.QueryString["search"];
 
     var currUserQuery = currUser != null ? "&user=" + currUser : string.Empty;
-    var currSearchQuery = currentSearch != null ? "&user=" + currentSearch : string.Empty;
+    var currSearchQuery = currentSearch != null ? "&search=" + currentSearch : string.Empty;
 }
 
 <p class="text-center">

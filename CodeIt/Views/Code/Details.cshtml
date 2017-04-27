@@ -34,13 +34,29 @@
     @{
         if (Model.MyUser != null)
         {
-            <a href="/Code/All?page=@Model.PrevPage&user=@Model.MyUser" class="btn btn-info"><< Back</a>
+            if (Model.MySearch != null)
+            {
+                <a href="/Code/All?page=@Model.PrevPage&user=@Model.MyUser&search=@Model.MySearch" class="btn btn-info"><< Back</a>
+            }
+            else
+            {
+                <a href="/Code/All?page=@Model.PrevPage&user=@Model.MyUser" class="btn btn-info"><< Back</a>
+            }
+
         }
-        else 
+        else
         {
-            <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+            if (Model.MySearch != null)
+            {
+                <a href="/Code/All?page=@Model.PrevPage&search=@Model.MySearch" class="btn btn-info"><< Back</a>
+            }
+            else
+            {
+                <a href="/Code/All?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+
+            }
         }
-        
+
     }
 
     

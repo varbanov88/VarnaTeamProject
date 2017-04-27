@@ -30,6 +30,10 @@
 </div>
 
 <p class="text-right">
+    @if (Model.MySearch != null)
+    {
+        <a href="/Code/AllGuest?page=@Model.PrevPage&search=@Model.MySearch" class="btn btn-info"><< Back</a>
+    }
     <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
 

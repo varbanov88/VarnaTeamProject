@@ -62,7 +62,7 @@ namespace CodeIt.Controllers
             return View(model);
         }
 
-        public ActionResult All(string search, int page = 1, string user = null)
+        public ActionResult All(int page = 1, string user = null, string search = null)
         {
             var pageSize = 10;
 
@@ -70,11 +70,11 @@ namespace CodeIt.Controllers
 
             var pasteQuery = db.Codes.AsQueryable();
 
+
             if (search != null)
             {
                 pasteQuery = pasteQuery
-                    .Where(p => p.CodeTitle.ToLower().Contains(search.ToLower())
-                    || p.CodeTitle.ToLower().Contains(search.ToLower()));
+                    .Where(p => p.CodeTitle.ToLower().Contains(search.ToLower()));
             }
 
             if (user != null)
@@ -100,7 +100,10 @@ namespace CodeIt.Controllers
             return View(pastes);
         }
 
-        public ActionResult Details(int id, int pPage = 1, string myUser = null)
+        public ActionResult Details(int id, 
+            int pPage = 1, 
+            string myUser = null,
+            string mySearch = null)
         {
             var db = new CodeItDbContext();
             var code = db.Codes.Where(c => c.Id == id).FirstOrDefault();
@@ -118,7 +121,8 @@ namespace CodeIt.Controllers
                 Coments = comments,
                 AuthorId = code.AuthorId,
                 MyUser = myUser,
-                TimeCreated = code.TimeCreated
+                TimeCreated = code.TimeCreated,
+                MySearch = mySearch
             };
 
 
@@ -162,7 +166,7 @@ namespace CodeIt.Controllers
             return View(model);
         }
 
-        public ActionResult GuestCodeDetails(int id, int pPage = 1)
+        public ActionResult GuestCodeDetails(int id, int pPage = 1, string mySearch = null)
         {
             var db = new CodeItDbContext();
             var code = db.GuestCodes.Where(c => c.Id == id).FirstOrDefault();
@@ -181,7 +185,8 @@ namespace CodeIt.Controllers
                 CodeContent = lines,
                 PrevPage = pPage,
                 Coments = comments,
-                TimeCreated = code.TimeCreated
+                TimeCreated = code.TimeCreated,
+                MySearch = mySearch
             };
 
 

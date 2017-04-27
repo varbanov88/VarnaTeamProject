@@ -24,7 +24,11 @@ namespace CodeIt.Models
         [Display(Name = "Author")]
         public string Author { get; set; }
 
+        //Optional | tells the previous page (the back button points at yt )
         public int PrevPage { get; set; }
+
+        //Optional | tell the search
+        public string MySearch { get; set; }
 
         public List<CommentOnGuest> Coments { get; set; }
 
