@@ -58,18 +58,6 @@
 </div>
 
 <hr class="lyne"/>
-
-
-<script>
-    function auto_grow(element) {
-        element.style.height = "200px";
-        element.style.height = (element.scrollHeight) + "px";
-        
-    }
-</script>
-
-
-
 @{
     if (Model.Coments.Count != 0)
     {
@@ -88,7 +76,9 @@
                 <div class="space10 comDiv">
                     <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
                     <p style="margin-left:10px">Date: @c.TimeCreated</p>
-                    <pre class="comment">@c.Content</pre>
+
+                    <pre class="comment style-2">@c.Content</pre>
+
                     <p class="text-right" style="margin:2px; margin-right:10px">
                         @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || c.IsAuthor(User.Identity.GetUserId())))
                         {
