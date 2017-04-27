@@ -266,13 +266,20 @@ namespace CodeIt.Controllers
 
         
 
-        public ActionResult AllGuest(int page = 1)
+        public ActionResult AllGuest(string search, int page = 1)
         {
             var pageSize = 10;
 
             var db = new CodeItDbContext();
 
             var pasteQuery = db.GuestCodes.AsQueryable();
+
+            if (search != null)
+            {
+                pasteQuery = pasteQuery
+                    .Where(p => p.CodeTitle.ToLower().Contains(search.ToLower())
+                    || p.CodeTitle.ToLower().Contains(search.ToLower()));
+            }
 
             var pastes = pasteQuery
                 .OrderByDescending(c => c.Id)
