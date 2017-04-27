@@ -34,7 +34,11 @@
     {
         <a href="/Code/AllGuest?page=@Model.PrevPage&search=@Model.MySearch" class="btn btn-info"><< Back</a>
     }
-    <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+    else
+    {
+        <a href="/Code/AllGuest?page=@Model.PrevPage" class="btn btn-info"><< Back</a>
+    }
+    
     <a href="/Comment/CreateOnGuest/@Model.Id" class="btn btn-success">Comment</a>
 
     @if (User.IsInRole("Admin"))
