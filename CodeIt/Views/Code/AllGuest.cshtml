@@ -14,7 +14,7 @@
 }
 @using (Html.BeginForm("AllGuest", "Code", FormMethod.Get))
 {
-    <div class="text-center">
+    <div class="text-center" mt-60>
         <input type="text" class="form-control" name="search" style="display: inline-block" value="@Request.QueryString["search"]" />
         <input type="submit" value="Search" class="btn btn-default" />
     </div>
