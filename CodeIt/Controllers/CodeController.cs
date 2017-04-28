@@ -196,7 +196,7 @@ namespace CodeIt.Controllers
         //Action for GuestPosts
 
         [HttpGet]
-        [AllowAnonymous]
+        [ValidateInput(false)]
         public ActionResult CreateAsGuest()
         {
             return View();
@@ -205,7 +205,7 @@ namespace CodeIt.Controllers
         //Action for GuestPosts
 
         [HttpPost]
-        [AllowAnonymous]
+        [ValidateInput(false)]
         public ActionResult CreateAsGuest(GuestCodeModel model)
         {
             if (ModelState.IsValid)
