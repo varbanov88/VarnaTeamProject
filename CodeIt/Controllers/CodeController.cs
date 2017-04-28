@@ -210,6 +210,7 @@ namespace CodeIt.Controllers
         //Action for GuestPosts
 
         [HttpPost]
+        [ValidateInput(false)]
         [AllowAnonymous]
         public ActionResult CreateAsGuest(GuestCodeModel model)
         {
