@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace CodeIt.Models
 {
@@ -12,6 +13,7 @@ namespace CodeIt.Models
 
         [Required]
         [Display(Name = "Code Comments")]
+        [AllowHtml]
         public string Content { get; set; }
 
         public int CodeId { get; set; }

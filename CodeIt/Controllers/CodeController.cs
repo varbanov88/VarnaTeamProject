@@ -37,7 +37,7 @@ namespace CodeIt.Controllers
 
         [Authorize]
         [HttpPost]
-        [ValidateInput(false)]
+       // [ValidateInput(false)]
         public ActionResult Edit(CodeModel model)
         {
             if (ModelState.IsValid )
@@ -143,7 +143,7 @@ namespace CodeIt.Controllers
         }
 
         [HttpPost]
-        [ValidateInput(false)]
+       // [ValidateInput(false)]
         [Authorize]
         public ActionResult Create(CreateCodeModel model)
         {
@@ -210,7 +210,7 @@ namespace CodeIt.Controllers
         //Action for GuestPosts
 
         [HttpPost]
-        [ValidateInput(false)]
+       // [ValidateInput(false)]
         [AllowAnonymous]
         public ActionResult CreateAsGuest(GuestCodeModel model)
         {
@@ -327,7 +327,7 @@ namespace CodeIt.Controllers
 
         [Authorize]
         [HttpPost]
-        [ValidateInput(false)]
+        //[ValidateInput(false)]
         public ActionResult GuestEdit(GuestCodeModel model)
         {
             if (ModelState.IsValid)

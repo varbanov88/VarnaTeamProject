@@ -72,6 +72,11 @@ pre {
     margin-bottom: 20px;
 }
 
+.noMargin{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 
 .paste_textarea {
     background-color: #eee;
@@ -9143,6 +9148,8 @@ h6.media-heading {
         margin-top: -9px;
         color: #ffffff;
     }
+
+
 
 /*# sourceMappingURL=style.css.map */
 

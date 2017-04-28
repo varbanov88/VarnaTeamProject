@@ -221,7 +221,7 @@ namespace CodeIt.Controllers
 
         [HttpPost]
         [Authorize]
-        [ValidateInput(false)]
+       // [ValidateInput(false)]
         public ActionResult Create(CommentViewModel model)
         {
             if (ModelState.IsValid)
@@ -241,7 +241,12 @@ namespace CodeIt.Controllers
 
                 return RedirectToAction("Details", "Code", new { id = model.Id });
             }
-
+            var db1 = new CodeItDbContext();
+            var code = db1.Codes.Find(model.Id).CodeContent
+                    .Split(new string[] { "\r\n", "\n" }
+                    , StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+            model.Code = code;
             return View(model);
         }
 
@@ -273,7 +278,7 @@ namespace CodeIt.Controllers
 
         [HttpPost]
         [Authorize]
-        [ValidateInput(false)]
+       // [ValidateInput(false)]
         public ActionResult CreateOnGuest(CommentViewModel model)
         {
             if (ModelState.IsValid)
@@ -296,6 +301,12 @@ namespace CodeIt.Controllers
                 return RedirectToAction("GuestCodeDetails", "Code", new { model.Id });
 
             }
+            var db1 = new CodeItDbContext();
+            var code = db1.GuestCodes.Find(model.Id).CodeContent
+                    .Split(new string[] { "\r\n", "\n" }
+                    , StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+            model.Code = code;
 
             return View(model);
         }

@@ -79,7 +79,7 @@
             <p class="lead" style="margin-bottom:0px; margin-left:10px">@c.Author.Nickname</p>
             <p style="margin-left:10px">Date: @c.TimeCreated</p>
 
-            <textarea class="comment " disabled>@c.Content</textarea>
+            <pre class="comment style-2" >@c.Content</pre>
             <p class="text-right" style="margin:2px; margin-right:10px">
                 @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || c.IsAuthor(User.Identity.GetUserId())))
                 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace CodeIt.Models
 {
@@ -20,6 +21,7 @@ namespace CodeIt.Models
         [StringLength(200)]
         public string CodeTitle { get; set; }
 
+        [AllowHtml]
         [Required(ErrorMessage = "Content Needed")]
         public string CodeContent { get; set; }
 

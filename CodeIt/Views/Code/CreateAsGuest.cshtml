@@ -28,7 +28,15 @@
         <div class="space20"></div>
         <div class="space20"></div>
         @Html.LabelFor(m => m.CodeContent, new { @class = "control-label col-md-2" })
-        <textarea class="form-control paste_textarea" cols="100" data-val="true" data-val-required="The CodeContent field is required." id="CodeContent" name="CodeContent" style="resize: horizontal; height: 400px;"></textarea>
+        @if (Model != null)
+        {
+            <textarea class="form-control paste_textarea" cols="100" data-val="true" data-val-required="The CodeContent field is required." id="CodeContent" name="CodeContent" style="resize: horizontal; height: 400px;">@Model.CodeContent</textarea>
+        }
+        else
+        {
+            <textarea class="form-control paste_textarea" cols="100" data-val="true" data-val-required="The CodeContent field is required." id="CodeContent" name="CodeContent" style="resize: horizontal; height: 400px;"></textarea>
+        }
+
     </div>
 
     <br>

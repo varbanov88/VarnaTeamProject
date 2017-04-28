@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace CodeIt.Models
 {
@@ -12,6 +13,7 @@ namespace CodeIt.Models
 
         [Required(ErrorMessage = "Code is required")]
         [Display(Name = "Your Code")]
+        [AllowHtml]
         public string CodeContent { get; set; }
     }
 }

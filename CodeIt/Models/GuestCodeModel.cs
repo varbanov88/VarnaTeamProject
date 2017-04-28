@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace CodeIt.Models
 {
@@ -20,6 +21,7 @@ namespace CodeIt.Models
         public string CodeTitle { get; set; }
 
         [Required]
+        [AllowHtml]
         [Display(Name = "Code Content")]
         public string CodeContent { get; set; }
 
