@@ -48,7 +48,7 @@ namespace CodeIt.Controllers
 
         [Authorize]
         [HttpPost]
-        public ActionResult EditOnGuest(Comment model)
+        public ActionResult EditOnGuest(CommentOnGuest model)
         {
             if (ModelState.IsValid)
             {
