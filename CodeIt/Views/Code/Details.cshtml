@@ -20,16 +20,20 @@
 
 <div class="space20"></div>
 
+<link rel="stylesheet" href="~/Content/highlighter/prettify.css" />
 
 <div id="selectable" class="ui-selectable space10">
     <ol class="text well">
        @foreach (var line in Model.CodeContent)
        {
-            <li class="li1" > <div class="de1" ><pre>@(line)</pre></div></li>
+            <li class="li1" > <div class="de1" ><pre class="prettyprint">@(line)</pre></div></li>
        }
+        
 
     </ol>
 </div>
+<script src="~/Content/highlighter/prettify.js"></script>
+<script>prettyPrint()</script>
 <p class="text-right">
     @{
         if (Model.MyUser != null)
